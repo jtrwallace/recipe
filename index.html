@@ -4,72 +4,47 @@
   <meta charset="UTF-8" />
   <title>Spaghetti Carbonara</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Recipe",
-    "name": "Spaghetti Carbonara",
-    "image": [
-      "recipe.png"
-    ],
-    "author": {
-      "@type": "Person",
-      "name": "JTech AI"
-    },
-    "description": "A simple and delicious spaghetti carbonara recipe.",
-    "recipeIngredient": [
-      "Spaghetti",
-      "Pancetta",
-      "Grated Parmesan cheese",
-      "Black pepper"
-    ],
-    "recipeInstructions": [
-      {
-        "@type": "HowToStep",
-        "text": "Cook the spaghetti."
-      },
-      {
-        "@type": "HowToStep",
-        "text": "Cook pancetta until crispy."
-      },
-      {
-        "@type": "HowToStep",
-        "text": "Mix eggs and cheese."
-      },
-      {
-        "@type": "HowToStep",
-        "text": "Combine everything and mix quickly off heat."
-      },
-      {
-        "@type": "HowToStep",
-        "text": "Serve with more cheese and pepper."
-      }
-    ]
-  }
-  </script>
   <style>
     body { font-family: sans-serif; max-width: 600px; margin: 2em auto; padding: 1em; }
     h1 { text-align: center; }
     img { width: 100%; border-radius: 8px; margin-bottom: 1em; }
   </style>
 </head>
-<body>
-  <h1>Spaghetti Carbonara</h1>
-  <img src="recipe.png" alt="Spaghetti Carbonara" />
+<body itemscope itemtype="https://schema.org/Recipe">
+  <h1 itemprop="name">Spaghetti Carbonara</h1>
+  <img src="recipe.png" alt="Spaghetti Carbonara" itemprop="image" />
+  <p itemprop="description">A simple and delicious spaghetti carbonara recipe.</p>
+
+  <h2>Author</h2>
+  <p itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span itemprop="name">JTech AI</span>
+  </p>
+
   <h2>Ingredients</h2>
   <ul>
-    <li>Spaghetti</li>
-    <li>Pancetta</li>
-    <li>Grated Parmesan cheese</li>
-    <li>Black pepper</li>
+    <li itemprop="recipeIngredient">Spaghetti</li>
+    <li itemprop="recipeIngredient">Pancetta</li>
+    <li itemprop="recipeIngredient">Grated Parmesan cheese</li>
+    <li itemprop="recipeIngredient">Black pepper</li>
   </ul>
+
   <h2>Instructions</h2>
-  <ol>
-    <li>Cook the spaghetti.</li>
-    <li>Cook pancetta until crispy.</li>
-    <li>Mix eggs and cheese.</li>
-    <li>Combine everything and mix quickly off heat.</li>
-    <li>Serve with more cheese and pepper.</li>
+  <ol itemprop="recipeInstructions">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+      <span itemprop="text">Cook the spaghetti.</span>
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+      <span itemprop="text">Cook pancetta until crispy.</span>
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+      <span itemprop="text">Mix eggs and cheese.</span>
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+      <span itemprop="text">Combine everything and mix quickly off heat.</span>
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToStep">
+      <span itemprop="text">Serve with more cheese and pepper.</span>
+    </li>
   </ol>
 </body>
 </html>
